@@ -9,7 +9,7 @@ import {methods as authorization} from "./middlewares/authorization.js";
 
 //Server
 const app = express();
-app.set("port",3000);
+app.set("port",4000);
 app.listen(app.get("port"));
 console.log("Servidor corriendo en puerto",app.get("port"));
 
