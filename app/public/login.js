@@ -1,5 +1,8 @@
 const mensajeError = document.getElementsByClassName("error")[0]
-
+//Fix para __direname
+import path from 'path';
+import {fileURLToPath} from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 document.getElementById("login").addEventListener("submit",async (e)=>{
   e.preventDefault();
   const user = e.target.children.user.value;
