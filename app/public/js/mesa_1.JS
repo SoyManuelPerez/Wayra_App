@@ -1,6 +1,7 @@
 $(document).ready( function () {
     $('#productos').DataTable();
 } )
+localStorage.setItem("contador",0); 
 let Productos = JSON.parse(localStorage.getItem("inventario")) || [];
 let Cuenta = JSON.parse(localStorage.getItem("Cuenta")) || [];
 let Registro = JSON.parse(localStorage.getItem("Registro")) || [];
@@ -9,10 +10,22 @@ let contador = JSON.parse(localStorage.getItem("contador")) || [];
 const contenido = document.querySelector("#contenido");
 const contenidoC = document.querySelector("#contenidoC");
 const contenidosuma = document.querySelector("#contenidosuma");
+const pagofactura = document.querySelector("#factura")
 if(parseInt(localStorage.getItem("Suma"))!=1||Cuenta==[]){
     let ini = 0
 Suma.push(ini)
 localStorage.setItem("Suma",Suma)}
+
+pagofactura.addEventListener("click", (e) => {
+    pago();
+    
+})
+function pago(){
+    localStorage.removeItem("Cuenta"); 
+    localStorage.removeItem("contador"); 
+    window.location.reload();
+    localStorage.setItem("contador",0); 
+}
 
 
 function mostar() {
