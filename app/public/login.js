@@ -4,7 +4,10 @@ document.getElementById("login").addEventListener("submit",async (e)=>{
   e.preventDefault();
   const user = e.target.children.user.value;
   const password = e.target.children.password.value;
-  const res = await fetch("http://localhost:4000/api/login",{
+   // Obtener la URL actual del navegador
+   const baseUrl = window.location.origin;
+   const apiUrl = `${baseUrl}/api/login`;
+  const res = await fetch(apiUrl,{
     method:"POST",
     headers:{
       "Content-Type":"application/json"

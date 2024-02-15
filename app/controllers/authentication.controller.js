@@ -45,8 +45,8 @@ if(usuarioAResvisar.type === "admin"){
   res.send({status:"ok",message:"Usuario loggeado",redirect:"/admin"});
 }else if(usuarioAResvisar.type === "mesero"){
   res.send({status:"ok",message:"Usuario loggeado",redirect:"/hospedaje"});
-}
-    
+}   
+
 }
 
 async function register(req,res){
