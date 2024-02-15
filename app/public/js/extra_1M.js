@@ -1,13 +1,11 @@
 $(document).ready( function () {
     $('#productos').DataTable();
 } )
-localStorage.setItem("contadorE1",0); 
 let Productos = JSON.parse(localStorage.getItem("inventario")) || [];
 let Cuenta = JSON.parse(localStorage.getItem("CuentaE1")) || [];
 let Registro = JSON.parse(localStorage.getItem("Registro")) || [];
 let Suma = JSON.parse(localStorage.getItem("SumaE1")) || [];
 let contador = JSON.parse(localStorage.getItem("contadorE1")) || [];
-const pagofactura = document.querySelector("#factura")
 const contenido = document.querySelector("#contenido");
 const contenidoC = document.querySelector("#contenidoC");
 const contenidosuma = document.querySelector("#contenidosuma");
@@ -15,16 +13,8 @@ if(parseInt(localStorage.getItem("SumaE1"))!=1||Cuenta==[]){
     let ini = 0
 Suma.push(ini)
 localStorage.setItem("SumaE1",Suma)}
-pagofactura.addEventListener("click", (e) => {
-    pago();
-    
-})
-function pago(){
-    localStorage.removeItem("CuentaE1"); 
-    localStorage.removeItem("contadorE1"); 
-    window.location.reload();
-    localStorage.setItem("contadorE1",0); 
-}
+
+
 function mostar() {
     let html  = "";
 
@@ -50,10 +40,6 @@ function mostar2() {
                 <td >${Producto}</td>
                 <td>${Precio}</td>
                 <td>${tipo}</td>
-                <td id="${id}">
-                <button type="button" class="btn btn-danger">Eliminar</button>
-                    <button type="button" class="btn btn-success">Pago</button>
-                </TD>
             </tr>
         `;
     });
