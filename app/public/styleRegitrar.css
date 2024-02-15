@@ -7,7 +7,7 @@ header{
 .fondos{
     position: relative;
     z-index: 1;
-    background-color: rgb(25, 141, 170);
+    background-color: rgb(57, 130, 226);
     max-width: 360px;
     padding-bottom: 10px;
     padding-top: 5px;
@@ -28,7 +28,7 @@ header{
 }
 
 body{
-    background-color: rgb(10, 97, 109);
+  background-color: rgb(57, 130, 226);
     color: aliceblue;
     text-align: center;
     font-family: "Roboto", sans-serif;
