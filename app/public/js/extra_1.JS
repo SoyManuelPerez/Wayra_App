@@ -11,6 +11,16 @@ const pagofactura = document.querySelector("#factura")
 const contenido = document.querySelector("#contenido");
 const contenidoC = document.querySelector("#contenidoC");
 const contenidosuma = document.querySelector("#contenidosuma");
+const ingresar = document.querySelector("#ingresar")
+const agregar = document.querySelector(".clientes")
+const modal = document.querySelector(".ingreso")
+ingresar.addEventListener("click",(e)=>{
+    e.defaultPrevented();
+    modal.classList.remove('close_ingreso')
+})
+agregar.addEventListener("click",(e)=>{
+    modal.classList.add('close_ingreso')
+})
 if(parseInt(localStorage.getItem("SumaE1"))!=1||Cuenta==[]){
     let ini = 0
 Suma.push(ini)

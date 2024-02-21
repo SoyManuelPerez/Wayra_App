@@ -46,6 +46,13 @@
         </header>
 <br>
 <div class="alineacion">
+    <button class="clientes"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 7.5C12 9.433 10.433 11 8.5 11C6.567 11 5 9.433 5 7.5C5 5.567 6.567 4 8.5 4C10.433 4 12 5.567 12 7.5Z" stroke="#000000" stroke-width="1.5"/>
+        <path d="M13.5 11C15.433 11 17 9.433 17 7.5C17 5.567 15.433 4 13.5 4" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M13.1429 20H3.85714C2.83147 20 2 19.2325 2 18.2857C2 15.9188 4.07868 14 6.64286 14H10.3571C11.4023 14 12.3669 14.3188 13.1429 14.8568" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 14V20M22 17L16 17" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+    </button>
     <button class="Pagos" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M12.002 9.00708C10.8974 9.00708 10.002 9.67865 10.002 10.5071C10.002 11.3355 10.8974 12.0071 12.002 12.0071C13.1065 12.0071 14.002 12.6787 14.002 13.5071C14.002 14.3355 13.1065 15.0071 12.002 15.0071M12.002 9.00708C12.8728 9.00708 13.6136 9.42448 13.8881 10.0071M12.002 9.00708V8.00708M12.002 15.0071C11.1311 15.0071 10.3903 14.5897 10.1158 14.0071M12.002 15.0071V16.0071" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M13 2.50708C13 2.50708 12.6839 2.50708 12 2.50708C7.52166 2.50708 5.28249 2.50708 3.89124 3.89833C2.5 5.28957 2.5 7.52874 2.5 12.0071C2.5 16.4854 2.5 18.7246 3.89124 20.1159C5.28249 21.5071 7.52166 21.5071 12 21.5071C16.4783 21.5071 18.7175 21.5071 20.1088 20.1159C21.5 18.7246 21.5 16.4854 21.5 12.0071C21.5 11.3232 21.5 11.0071 21.5 11.0071" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
@@ -104,6 +111,44 @@
         </div>
     </div>
 </div>
+<section class="ingreso">
+    <div class="cont_ingreso">
+        <form class="form" id="Ingreso">
+            <h2>Registrar Huesped</h2>
+            <div class="fondosM">
+                <label for="Nombre" class="sr-only">Nombre</label>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Nombres" required>
+            </div>
+            <div class="fondosM">
+                <label for="Apellido" class="sr-only">Apellido</label>
+                <input type="text" name="Apellido" id="Apellido" placeholder="Apellidos" required>
+            </div>
+            <div class="fondosM">
+                <label for="Correo" class="sr-only">Correo</label>
+                <input type="email" name="Correo" id="Correo" placeholder="Correo" required>
+            </div>
+            <div class="fondosM">
+                <legend for="Precio" >Tipo Documento</legend>
+                <select name="Tipo" id="Tipo">
+                    <option value="Null">---Seleccione---</option>
+                    <option value="CC">CC</option>
+                    <option value="TI">TI</option>
+                    <option value="CE">CE</option>
+                    <option value="PSS">PSS</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <label for="Documento" class="sr-only">Documento</label>
+                <input type="text" name="Documento" id="Documento" placeholder="Documento" required>
+            </div>
+            <div class="fondosM">
+                <label for="Pago" class="sr-only">Pago</label>
+                <input type="number" name="Pago" id="Pago" placeholder="Monto pagado" required>
+            </div>
+            <br>
+            <button type="submit" id="ingresar">Ingresar</button>
+          </form>
+    </div>
+</section>
 <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="../js/Extras.js"></script>
