@@ -117,15 +117,15 @@
             <h2>Registrar Huesped</h2>
             <div class="fondosM">
                 <label for="Nombre" class="sr-only">Nombre</label>
-                <input type="text" name="Nombre" id="Nombre" placeholder="Nombres" required>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Nombres" >
             </div>
             <div class="fondosM">
                 <label for="Apellido" class="sr-only">Apellido</label>
-                <input type="text" name="Apellido" id="Apellido" placeholder="Apellidos" required>
+                <input type="text" name="Apellido" id="Apellido" placeholder="Apellidos" >
             </div>
             <div class="fondosM">
                 <label for="Correo" class="sr-only">Correo</label>
-                <input type="email" name="Correo" id="Correo" placeholder="Correo" required>
+                <input type="email" name="Correo" id="Correo" placeholder="Correo" >
             </div>
             <div class="fondosM">
                 <legend for="Precio" >Tipo Documento</legend>
@@ -138,14 +138,17 @@
                     <option value="Otro">Otro</option>
                 </select>
                 <label for="Documento" class="sr-only">Documento</label>
-                <input type="text" name="Documento" id="Documento" placeholder="Documento" required>
+                <input type="text" name="Documento" id="Documento" placeholder="Documento" >
             </div>
             <div class="fondosM">
                 <label for="Pago" class="sr-only">Pago</label>
-                <input type="number" name="Pago" id="Pago" placeholder="Monto pagado" required>
+                <input type="number" name="Pago" id="Pago" placeholder="Monto pagado" >
             </div>
             <br>
-            <button type="submit" id="ingresar">Ingresar</button>
+            <div>
+                <button type="submit" id="ingresar">Ingresar</button>
+                <button class="cerrar">Cerrar</button>
+            </div>
           </form>
     </div>
 </section>

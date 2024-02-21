@@ -7,11 +7,12 @@ const contenido = document.querySelector("#contenido");
 function mostar() {
     let html  = "";
 
-    Productos. forEach(({ id, Producto, Precio ,tipo}) => {
+    Productos. forEach(({ id, Producto, Precio ,cantidad,tipo}) => {
         html += `
             <tr>
                 <td>${Producto}</td>
                 <td>${Precio}</td>
+                <td>${cantidad}</td>
                 <td>${tipo}</td>
                 <td id="${id}">
                     <button type="button" class="btn btn-danger">Eliminar</button>
@@ -25,9 +26,10 @@ formRegister.addEventListener("submit", (e) => {
     e.preventDefault();
     const Producto = e.target.Producto.value.trim();
     const Precio = e.target.Precio.value.trim();
+    const cantidad = e.target.Cantidad.value.trim();
     const tipo = e.target.Tipo.value.trim();
-    const formUser = { id: crypto.randomUUID(),Producto, Precio,tipo };
-    Productos.push(formUser);
+    const Product = { id: crypto.randomUUID(),Producto, Precio,cantidad,tipo };
+    Productos.push(Product);
     formRegister.reset();
     mostar();
     localStorage.setItem("inventario", JSON.stringify(Productos));

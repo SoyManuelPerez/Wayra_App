@@ -50,6 +50,7 @@ body{
     text-align: center;
     border-radius: 3px;
 }
+
 .fondosM{
     position: relative;
     z-index: 1;
@@ -93,6 +94,7 @@ button {
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+    border-radius: 6px;
   }
 /*Modal de ingreso*/
 .ingreso{
@@ -123,5 +125,18 @@ button {
 .close_ingreso{
 opacity: 1;
 pointer-events: unset;
-
+}
+.cerrar{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(218, 21, 21);
+    border: 0;
+    padding: 15px;
+    color: #0e0e0e;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 6px;
 }
