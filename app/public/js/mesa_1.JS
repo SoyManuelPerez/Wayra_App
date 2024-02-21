@@ -10,7 +10,17 @@ let contador = JSON.parse(localStorage.getItem("contador")) || [];
 const contenido = document.querySelector("#contenido");
 const contenidoC = document.querySelector("#contenidoC");
 const contenidosuma = document.querySelector("#contenidosuma");
-const pagofactura = document.querySelector("#factura")
+const pagofactura = document.querySelector("#ingresar")
+const ingresar = document.querySelector("#factura")
+const agregar = document.querySelector(".clientes")
+const modal = document.querySelector(".ingreso")
+ingresar.addEventListener("click",(e)=>{
+    e.defaultPrevented();
+    modal.classList.remove('close_ingreso')
+})
+agregar.addEventListener("click",(e)=>{
+    modal.classList.add('close_ingreso')
+})
 if(parseInt(localStorage.getItem("Suma"))!=1||Cuenta==[]){
     let ini = 0
 Suma.push(ini)
