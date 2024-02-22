@@ -30,6 +30,8 @@ app.get("/DS-1",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/p
 app.get("/HB-1",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/HB-1.html"));
 app.get("/DS-1M",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/mesero/DS-1.html"));
 app.get("/HB-1M",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/mesero/HB-1.html"));
+app.get("/huespedes",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/admin/huespedes.html"))
+app.get("/ventas",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/admin/ventas.html"))
 //Rutas POST
 app.post("/api/login",authentication.login);
 app.post("/api/register",authentication.register);

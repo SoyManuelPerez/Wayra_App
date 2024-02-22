@@ -15,7 +15,7 @@ const ingresar = document.querySelector("#ingresar")
 const agregar = document.querySelector(".clientes")
 const modal = document.querySelector(".ingreso")
 ingresar.addEventListener("click",(e)=>{
-    e.defaultPrevented();
+
     modal.classList.remove('close_ingreso')
 })
 agregar.addEventListener("click",(e)=>{
@@ -165,4 +165,27 @@ contenidoC.addEventListener("click", (e) => {
 mostar();
 mostar2()
 mostar3()
+//Ingreso huesped
+localStorage.setItem("contaH",0);
+let ingreso = JSON.parse(localStorage.getItem("huespedes")) || [];
+const tabla = document.querySelector("#huesped");
+const formRegister = document.querySelector("#Ingreso");
 
+formRegister.addEventListener("submit", (e) => {
+    inH= [];
+    e.preventDefault();
+    const hb = "HB-1";
+    const Nombres = e.target.Nombre.value.trim();
+    const Apellidos = e.target.Apellido.value.trim();
+    const Correo = e.target.Correo.value.trim();
+    const Tipo = e.target.Tipo.value.trim();
+    const Documento = e.target.Documento.value.trim();
+    const Pago = e.target.Pago.value.trim();
+    const ingreso = { id: crypto.randomUUID(),hb, Nombres,Apellidos,Correo,Tipo,Documento,Pago };
+    inH.push(ingreso);
+    formRegister.reset();
+    mostar();
+    localStorage.setItem("huespedes", JSON.stringify(inH));
+    let contador = 1 + parseInt(localStorage.getItem("contaH"));
+    localStorage.setItem("contaH",contador);
+});
