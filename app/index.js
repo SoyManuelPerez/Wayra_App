@@ -33,6 +33,7 @@ app.get("/HB-1M",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/
 app.get("/huespedes",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/admin/huespedes.html"))
 app.get("/ventas",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/admin/ventas.html"))
 app.get("/Bar",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/Bar.html"))
+app.get("/Restaurante",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/Restaurante.html"))
 //Rutas POST
 app.post("/api/login",authentication.login);
 app.post("/api/register",authentication.register);

@@ -18,6 +18,11 @@ export const usuarios = [{
   type: "bar",
   password: "$2a$05$nLY2It8riku2vwwDIINdgO/XIyPXRg1Gn9LFgnhwKqC4TwcAwEUL2"
   
+},{
+  user: "restaurante",
+  type: "restaurante",
+  password: "$2a$05$nLY2It8riku2vwwDIINdgO/XIyPXRg1Gn9LFgnhwKqC4TwcAwEUL2"
+  
 }]
 
 async function login(req,res){
@@ -51,7 +56,10 @@ if(usuarioAResvisar.type === "admin"){
   res.send({status:"ok",message:"Usuario loggeado",redirect:"/hospedaje"});
 }   else if(usuarioAResvisar.type === "bar"){
   res.send({status:"ok",message:"Usuario loggeado",redirect:"/Bar"});
+} else if(usuarioAResvisar.type === "restaurante"){
+  res.send({status:"ok",message:"Usuario loggeado",redirect:"/Restaurante"});
 }
+
 
 }
 
