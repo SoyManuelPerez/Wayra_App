@@ -59,14 +59,15 @@ if(usuarioAResvisar.type === "admin"){
 } else if(usuarioAResvisar.type === "restaurante"){
   res.send({status:"ok",message:"Usuario loggeado",redirect:"/Restaurante"});
 }
-
-
 }
 
 async function register(req,res){
   const user = req.body.user;
   const password = req.body.password;
   const type = req.body.type;
+  console.log(user)
+  console.log(password)
+  console.log(type)
   if(!user || !password || !type){
     return res.status(400).send({status:"Error",message:"Los campos están incompletos"})
   }
@@ -81,7 +82,7 @@ async function register(req,res){
   }
   usuarios.push(nuevoUsuario);
   console.log(usuarios);
-  return res.status(201).send({status:"ok",message:`Usuario ${nuevoUsuario.user} agregado`,redirect:"/"})
+  return res.status(201).send({status:"ok",message:`Usuario ${nuevoUsuario.user} agregado`,redirect:"/admin"})
 }
 
 export const methods = {

@@ -1,6 +1,4 @@
-.ds{
-    color: #000000;
-}
+
 .fondos{
     position: relative;
     z-index: 1;
@@ -101,12 +99,7 @@ body{
   .form button:hover,.form button:active,.form button:focus {
     background: rgb(2, 126, 209);
   }
-  .container {
-    position: relative;
-    z-index: 1;
-    max-width: 300px;
-    margin: 0 auto;
-  }
+  
   .container:before, .container:after {
     content: "";
     display: block;

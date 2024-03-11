@@ -37,4 +37,4 @@ app.get("/Bar",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pa
 app.get("/Restaurante",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/Restaurante.html"))
 //Rutas POST
 app.post("/api/login",authentication.login);
-app.post("/api/register",authentication.register);
+app.post("/register",authentication.register);
