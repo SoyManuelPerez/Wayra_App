@@ -1,6 +1,6 @@
 import  express  from "express";
 import cookieParser from 'cookie-parser';
-const mongodb = require("mongoose");
+import mongoose from "mongoose";
 //Fix para __direname
 import path from 'path';
 import {fileURLToPath} from 'url';
