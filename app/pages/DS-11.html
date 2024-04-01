@@ -10,10 +10,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="admin.js" defer></script>
-<title>HB-1</title>
+<title id="Extra1"></title>
 </head>
 <body>
     <header>
@@ -56,26 +56,25 @@
         </header>
 <br>
 <div class="alineacion">
-    <button class="clientes" data-toggle="tooltip" data-placement="top" title="Ingresar Cliente"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <button class="clientes"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M12 7.5C12 9.433 10.433 11 8.5 11C6.567 11 5 9.433 5 7.5C5 5.567 6.567 4 8.5 4C10.433 4 12 5.567 12 7.5Z" stroke="#000000" stroke-width="1.5"/>
         <path d="M13.5 11C15.433 11 17 9.433 17 7.5C17 5.567 15.433 4 13.5 4" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M13.1429 20H3.85714C2.83147 20 2 19.2325 2 18.2857C2 15.9188 4.07868 14 6.64286 14H10.3571C11.4023 14 12.3669 14.3188 13.1429 14.8568" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M19 14V20M22 17L16 17" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
     </button>
-    <button class="Pagos" data-toggle="tooltip" data-placement="top" title="Imprimir Pre-Cuenta"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <button class="Pagos" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M12.002 9.00708C10.8974 9.00708 10.002 9.67865 10.002 10.5071C10.002 11.3355 10.8974 12.0071 12.002 12.0071C13.1065 12.0071 14.002 12.6787 14.002 13.5071C14.002 14.3355 13.1065 15.0071 12.002 15.0071M12.002 9.00708C12.8728 9.00708 13.6136 9.42448 13.8881 10.0071M12.002 9.00708V8.00708M12.002 15.0071C11.1311 15.0071 10.3903 14.5897 10.1158 14.0071M12.002 15.0071V16.0071" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M13 2.50708C13 2.50708 12.6839 2.50708 12 2.50708C7.52166 2.50708 5.28249 2.50708 3.89124 3.89833C2.5 5.28957 2.5 7.52874 2.5 12.0071C2.5 16.4854 2.5 18.7246 3.89124 20.1159C5.28249 21.5071 7.52166 21.5071 12 21.5071C16.4783 21.5071 18.7175 21.5071 20.1088 20.1159C21.5 18.7246 21.5 16.4854 21.5 12.0071C21.5 11.3232 21.5 11.0071 21.5 11.0071" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M21.4883 2.49292L17.3125 6.67112M16.4883 3.01468L16.6065 6.10617C16.6065 6.83481 17.0416 7.2888 17.8341 7.34606L20.9581 7.49292" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </button>
-    <button class="Pagos" id="factura" data-toggle="tooltip" data-placement="top" title="Pagar cuenta"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        </svg></button>
+    <button class="Pagos" id="factura"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M13.4659 4.02246C15.9701 4.02246 18 6.03463 18 8.51676C18 10.9989 15.9701 13.0111 13.4659 13.0111C11.2439 13.0111 9.39528 11.4269 9.00684 9.33581" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
         <path d="M21.9977 14.0098H19.6047C19.3107 14.0098 19.0208 14.076 18.7579 14.2031L16.7176 15.1899C16.4547 15.317 16.1648 15.3831 15.8708 15.3831H14.829C13.8214 15.3831 13.0045 16.1732 13.0045 17.1478C13.0045 17.1871 13.0315 17.2218 13.0706 17.2326L15.6096 17.9343C16.0651 18.0601 16.5528 18.0163 16.9765 17.8113L19.1577 16.7566M13.0045 16.5066L8.41518 15.0973C7.6016 14.8439 6.72215 15.1443 6.21251 15.8497C5.84403 16.3597 5.99406 17.0901 6.53091 17.3997L14.0408 21.7305C14.5184 22.0059 15.082 22.0731 15.6073 21.9173L21.9977 20.022" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M2.00195 4.51946C3.52934 3.92192 5.70251 2.46381 6.89042 2.16488C9.52307 1.63627 10.9042 2.41475 14.0218 4.02328C12.7097 4.05108 10.9458 4.8019 10.0777 6.51749M10.0777 6.51749H8.29356M10.0777 6.51749H11.3866C11.7803 6.54609 12.6286 6.78318 12.9555 7.54414C13.0867 7.84952 13.1241 8.21246 12.8665 8.39582C12.5192 8.7541 12.0207 8.74007 11.5785 8.81844M11.5785 8.81844C11.071 8.90838 10.5821 9.00828 10.071 9.1077M11.5785 8.81844L10.071 9.1077M10.071 9.1077C9.95817 9.12964 9.84428 9.15156 9.72886 9.17335M10.071 9.1077L9.72886 9.17335M9.72886 9.17335C8.93219 9.26231 6.99002 10.1914 6.04417 10.4516C5.72222 10.6054 3.14121 11.1057 2.01609 11.0179" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg></button>
 </div>
-<div class="row ">
+<div class="row align-items-start">
     <div class="col-6">
         <h2>Productos</h2>
         <div class="container" >
@@ -93,16 +92,15 @@
             </table>
         </div>
     </div>
-    <div class="col-6 sm-col-12">
-        <h2>Cuenta</h2>
+    <div class="col-6">
+        <h2>Cuenta </h2>
         <div class="container" >
-            <table id="Cuenta" class="tabla table table-dark "  >
+            <table id="Cuenta" class="table table-dark" style="width: 100%;">
                     <thead>
                     <tr>
                         <th scope="col">Producto</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Tipo</th>
-                        <th scope="col">Mesero</th>
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>
@@ -123,14 +121,56 @@
         </div>
     </div>
 </div>
+<section class="ingreso">
+    <div class="cont_ingreso">
+        <form class="form" id="Ingreso">
+            <h2>Registrar Huesped</h2>
+            <div class="fondosM">
+                <label for="Nombre" class="sr-only">Nombre</label>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Nombres" >
+            </div>
+            <div class="fondosM">
+                <label for="Apellido" class="sr-only">Apellido</label>
+                <input type="text" name="Apellido" id="Apellido" placeholder="Apellidos" >
+            </div>
+            <div class="fondosM">
+                <label for="Correo" class="sr-only">Correo</label>
+                <input type="email" name="Correo" id="Correo" placeholder="Correo" >
+            </div>
+            <div class="fondosM">
+                <legend for="Precio" >Tipo Documento</legend>
+                <select name="Tipo" id="Tipo">
+                    <option value="Null">---Seleccione---</option>
+                    <option value="CC">CC</option>
+                    <option value="TI">TI</option>
+                    <option value="CE">CE</option>
+                    <option value="PSS">PSS</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <label for="Documento" class="sr-only">Documento</label>
+                <input type="text" name="Documento" id="Documento" placeholder="Documento" >
+            </div>
+            <div class="fondosM">
+                <label for="Pago" class="sr-only">Pago</label>
+                <input type="number" name="Pago" id="Pago" placeholder="Monto pagado" >
+            </div>
+            <br>
+            <div>
+                <button type="submit" id="ingresar">Ingresar</button>
+                <button class="cerrar">Cerrar</button>
+            </div>
+          </form>
+    </div>
+</section>
 <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="../js/Extras.js"></script>
 <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-<script src="../js/mesa_1.JS"></script>
+<script src="../js/extra_1.JS"></script>
 </body>
 </html>

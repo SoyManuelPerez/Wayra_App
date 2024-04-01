@@ -1,5 +1,7 @@
 $(document).ready( function () {
-    $('#productos').DataTable();
+    $('#productos').DataTable({
+        lengthChange: false
+    });
 } )
 localStorage.setItem("contadorE1",0); 
 let Productos = JSON.parse(localStorage.getItem("inventario")) || [];
