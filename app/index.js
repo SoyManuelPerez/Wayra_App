@@ -1,7 +1,5 @@
 import  express  from "express";
 import cookieParser from 'cookie-parser';
-import mongoose from "mongoose";
-
 //Fix para __direname
 import path from 'path';
 import {fileURLToPath} from 'url';
@@ -28,7 +26,6 @@ app.get("/DS",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pag
 app.get("/DSM",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/mesero/DS.html"));
 app.get("/Productos",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/admin/Productos.html"));
 app.get("/hospedaje",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/mesero/hospedaje.html"));
-app.get("/DS-1",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
 app.get("/DS-1M",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/mesero/DS-1.html"));
 app.get("/HB-1M",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/mesero/HB-1.html"));
 app.get("/huespedes",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/admin/huespedes.html"))
@@ -62,7 +59,37 @@ app.get("/CB-22",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/
 app.get("/CB-23",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/CB-23.html"));
 app.get("/CB-24",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/CB-24.html"));
 app.get("/CB-25",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/CB-25.html"));
-
+//DiasSol
+app.get("/DS-1",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-2",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-3",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-4",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-5",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-6",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-7",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-8",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-9",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-10",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-11",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-12",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-13",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-14",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-15",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-16",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-17",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-18",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-19",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-20",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-21",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-22",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-23",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-24",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-25",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-26",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-27",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-28",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-29",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
+app.get("/DS-30",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/DS-1.html"));
 //Rutas POST
 app.post("/api/login",authentication.login);
 app.post("/api/register",authentication.register);
