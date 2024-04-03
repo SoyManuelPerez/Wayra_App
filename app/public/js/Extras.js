@@ -34,6 +34,30 @@ function CExtra9() {
     let nombre = document.getElementById("NExtra9").value;
     localStorage.setItem("NombreX9",nombre);
 }
+function CExtra10() { 
+    let nombre = document.getElementById("NExtra10").value;
+    localStorage.setItem("NombreX10",nombre);
+}
+function CExtra11() { 
+    let nombre = document.getElementById("NExtra11").value;
+    localStorage.setItem("NombreX11",nombre);
+}
+function CExtra12() { 
+    let nombre = document.getElementById("NExtra12").value;
+    localStorage.setItem("NombreX12",nombre);
+}
+function CExtra13() { 
+    let nombre = document.getElementById("NExtra13").value;
+    localStorage.setItem("NombreX13",nombre);
+}
+function CExtra14() { 
+    let nombre = document.getElementById("NExtra14").value;
+    localStorage.setItem("NombreX14",nombre);
+}function CExtra15() { 
+    let nombre = document.getElementById("NExtra15").value;
+    localStorage.setItem("NombreX15",nombre);
+}
+
 document.addEventListener("DOMContentLoaded",function(event){
     document.getElementById("Extra1").innerHTML = localStorage.getItem("NombreX1");
     document.getElementById("Extra2").innerHTML = localStorage.getItem("NombreX2");
@@ -44,4 +68,10 @@ document.addEventListener("DOMContentLoaded",function(event){
     document.getElementById("Extra7").innerHTML = localStorage.getItem("NombreX7");
     document.getElementById("Extra8").innerHTML = localStorage.getItem("NombreX8");
     document.getElementById("Extra9").innerHTML = localStorage.getItem("NombreX9");
+    document.getElementById("Extra10").innerHTML = localStorage.getItem("NombreX10");
+    document.getElementById("Extra11").innerHTML = localStorage.getItem("NombreX11");
+    document.getElementById("Extra21").innerHTML = localStorage.getItem("NombreX12");
+    document.getElementById("Extr3a1").innerHTML = localStorage.getItem("NombreX13");
+    document.getElementById("Ext4ra1").innerHTML = localStorage.getItem("NombreX14");
+    document.getElementById("Ex5tra1").innerHTML = localStorage.getItem("NombreX15");
 })
