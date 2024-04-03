@@ -4,23 +4,25 @@ $(document).ready( function () {
     });
 } )
 //Creacion de bases de datos locales
-localStorage.setItem("contador",0); 
 let Productos = JSON.parse(localStorage.getItem("inventario")) || [];
-let Cuenta = JSON.parse(localStorage.getItem("Cuenta")) || []
-let contador = JSON.parse(localStorage.getItem("contador")) || [];
+let Cuenta = JSON.parse(localStorage.getItem("Cuenta-HB2")) || []
+let contador = JSON.parse(localStorage.getItem("contador-HB2")) || [];
 let Registro = JSON.parse(localStorage.getItem("Registro")) || [];
-let Suma = JSON.parse(localStorage.getItem("Suma")) || [];
+let Suma = JSON.parse(localStorage.getItem("Suma-HB2")) || [];
 const contenido = document.querySelector("#contenido");
 const contenidoC = document.querySelector("#contenidoC");
 const contenidosuma = document.querySelector("#contenidosuma");
 const pagofactura = document.querySelector("#factura")
-
+if(parseInt(localStorage.getItem("Suma-HB2"))!=1||Cuenta==[]){
+    let ini = 0
+Suma.push(ini)
+localStorage.setItem("Suma-HB2",Suma)}
 //Para cuadno se paga la factura elimine toda la cuneta
 pagofactura.addEventListener("click", (e) => {
-    localStorage.removeItem("Cuenta"); 
-    localStorage.removeItem("contador"); 
+    localStorage.removeItem("Cuenta-HB2"); 
+    localStorage.removeItem("contador-HB2"); 
     window.location.reload();
-    localStorage.setItem("contador",0); 
+    localStorage.setItem("contador-HB2",0); 
 })
 //Funcion para mostrar los productos
 function mostar() {
@@ -60,7 +62,7 @@ function mostar2() {
 }
 //Funcion para mostra la suma de la cuenta
 function mostar3() {
-    let total = parseInt(localStorage.getItem("contador"))
+    let total = parseInt(localStorage.getItem("contador-HB2"))
     console.log()
     let html  = "";
         html += `
@@ -73,26 +75,26 @@ function mostar3() {
 }
 //Funcion para calcular la suma de la cuneta
 function sumatoria(precio){
-    if (parseInt(localStorage.getItem("Suma"))==0){let sumatoria =[]
+    if (parseInt(localStorage.getItem("Suma-HB2"))==0){let sumatoria =[]
         sumatoria.push(precio)
-        localStorage.setItem("contador",sumatoria)
+        localStorage.setItem("contador-HB2",sumatoria)
         ini=1
-        localStorage.removeItem("Suma")
+        localStorage.removeItem("Suma-HB2")
         let sum=[]
         sum.push(ini)
-        localStorage.setItem("Suma",sum)
+        localStorage.setItem("Suma-HB2",sum)
         }
-        else if(parseInt(localStorage.getItem("Suma"))==1){
-            let con = parseInt(localStorage.getItem("contador")) 
+        else if(parseInt(localStorage.getItem("Suma-HB2"))==1){
+            let con = parseInt(localStorage.getItem("contador-HB2")) 
             let total= con + precio
-            localStorage.setItem("contador",total)
+            localStorage.setItem("contador-HB2",total)
         }
 }
 //Funcion para restar si ya se pago algun producto o se elimina 
 function resta(valor){
-            let con = parseInt(localStorage.getItem("contador"))
+            let con = parseInt(localStorage.getItem("contador-HB2"))
             let total= con - valor
-            localStorage.setItem("contador",total)
+            localStorage.setItem("contador-HB2",total)
             mostar3()
 }
 
@@ -107,7 +109,7 @@ contenido.addEventListener("click", (e) => {
         const tipo = Prod.tipo
         const formUser = { id: crypto.randomUUID(),Producto, Precio, tipo };
         Cuenta.push(formUser);
-        localStorage.setItem("Cuenta", JSON.stringify(Cuenta));
+        localStorage.setItem("Cuenta-HB2", JSON.stringify(Cuenta));
         mostar();
         mostar2()
         mostar3()
@@ -127,7 +129,7 @@ contenidoC.addEventListener("click", (e) => {
         mostar();
         mostar2()
         mostar3()
-        localStorage.setItem("Cuenta", JSON.stringify(Cuenta));
+        localStorage.setItem("Cuenta-HB2", JSON.stringify(Cuenta));
     }
     
     if (e.target.classList.contains("btn-success")) {
@@ -145,10 +147,10 @@ contenidoC.addEventListener("click", (e) => {
         let fecha = formatDate(date);
         const formUser = { id: crypto.randomUUID(),Producto, Precio, tipo, fecha };
         Registro.push(formUser);
-        localStorage.setItem("Registro", JSON.stringify(Registro));
+        localStorage.setItem("Registro-HB2", JSON.stringify(Registro));
         const newArray = Cuenta.filter((Cuenta) => Cuenta.id !== id);
         Cuenta = newArray;
-        localStorage.setItem("Cuenta", JSON.stringify(Cuenta));
+        localStorage.setItem("Cuenta-HB2", JSON.stringify(Cuenta));
         mostar();
         mostar2()
     }

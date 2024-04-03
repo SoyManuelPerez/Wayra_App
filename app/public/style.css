@@ -106,6 +106,12 @@ button {
     text-decoration: none;
     color: #000000;
 }
+.contenedor-tabla {
+    max-height: 250px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Habilitar la barra de desplazamiento vertical */
+    padding: 10px; /* Espaciado interior */
+    margin-right: 3px;
+}
 @media only screen and (max-width: 600px) {
     .espacio{
         padding-top: 10%;
