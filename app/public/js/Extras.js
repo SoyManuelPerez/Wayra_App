@@ -69,17 +69,14 @@ function CExtra18() {
     let nombre = document.getElementById("NExtra18").value;
     localStorage.setItem("NombreX18",nombre);
 }
-v
 function CExtra19() { 
     let nombre = document.getElementById("NExtra19").value;
     localStorage.setItem("NombreX19",nombre);
 }
-vv
 function CExtra20() { 
     let nombre = document.getElementById("NExtra20").value;
     localStorage.setItem("NombreX20",nombre);
 }
-v
 function CExtra21() { 
     let nombre = document.getElementById("NExtra21").value;
     localStorage.setItem("NombreX21",nombre);
