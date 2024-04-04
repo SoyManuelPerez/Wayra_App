@@ -1,35 +1,30 @@
 $(document).ready( function () {
     $('#productos').DataTable({
-        lengthChange: false
+        lengthChange: false,
     });
 } )
-localStorage.setItem("contadorE1",0); 
+//Creacion de bases de datos locales
 let Productos = JSON.parse(localStorage.getItem("inventario")) || [];
-let Cuenta = JSON.parse(localStorage.getItem("CuentaE1")) || [];
+let Cuenta = JSON.parse(localStorage.getItem("CuentaE1")) || []
+let contador = JSON.parse(localStorage.getItem("contadorE1")) || [];
 let Registro = JSON.parse(localStorage.getItem("Registro")) || [];
 let Suma = JSON.parse(localStorage.getItem("SumaE1")) || [];
-let contador = JSON.parse(localStorage.getItem("contadorE1")) || [];
-const pagofactura = document.querySelector("#factura")
 const contenido = document.querySelector("#contenido");
 const contenidoC = document.querySelector("#contenidoC");
 const contenidosuma = document.querySelector("#contenidosuma");
-const ingresar = document.querySelector("#ingresar")
-const agregar = document.querySelector(".clientes")
-const modal = document.querySelector(".ingreso")
+const pagofactura = document.querySelector("#factura")
 if(parseInt(localStorage.getItem("SumaE1"))!=1||Cuenta==[]){
     let ini = 0
 Suma.push(ini)
 localStorage.setItem("SumaE1",Suma)}
+//Para cuadno se paga la factura elimine toda la cuneta
 pagofactura.addEventListener("click", (e) => {
-    pago();
-    
-})
-function pago(){
     localStorage.removeItem("CuentaE1"); 
     localStorage.removeItem("contadorE1"); 
     window.location.reload();
     localStorage.setItem("contadorE1",0); 
-}
+})
+//Funcion para mostrar los productos
 function mostar() {
     let html  = "";
 
@@ -47,6 +42,7 @@ function mostar() {
     });
     contenido. innerHTML = html;
 }
+//Funccion para mostra los productos en la cuenta
 function mostar2() {
     let html  = "";
     Cuenta. forEach(({ id, Producto, Precio ,tipo}) => {
@@ -63,12 +59,8 @@ function mostar2() {
         `;
     });
     contenidoC. innerHTML = html;
-    let factura = ""
-    Cuenta.forEach(({Producto,Precio})=>{
-        factura +=`<p>${Producto}  ${Precio}</p>`
-    })
-    console.log(factura)
 }
+//Funcion para mostra la suma de la cuenta
 function mostar3() {
     let total = parseInt(localStorage.getItem("contadorE1"))
     console.log()
@@ -81,6 +73,7 @@ function mostar3() {
     
     contenidosuma. innerHTML = html;
 }
+//Funcion para calcular la suma de la cuneta
 function sumatoria(precio){
     if (parseInt(localStorage.getItem("SumaE1"))==0){let sumatoria =[]
         sumatoria.push(precio)
@@ -97,12 +90,14 @@ function sumatoria(precio){
             localStorage.setItem("contadorE1",total)
         }
 }
+//Funcion para restar si ya se pago algun producto o se elimina 
 function resta(valor){
             let con = parseInt(localStorage.getItem("contadorE1"))
             let total= con - valor
             localStorage.setItem("contadorE1",total)
             mostar3()
 }
+
 contenido.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn-success")) {
         const id = e.target.parentElement.id;
@@ -136,6 +131,7 @@ contenidoC.addEventListener("click", (e) => {
         mostar3()
         localStorage.setItem("CuentaE1", JSON.stringify(Cuenta));
     }
+    
     if (e.target.classList.contains("btn-success")) {
         const id = e.target.parentElement.id;
         const Prod = Cuenta.find(((Cuenta) => Cuenta.id === id));
@@ -151,7 +147,7 @@ contenidoC.addEventListener("click", (e) => {
         let fecha = formatDate(date);
         const formUser = { id: crypto.randomUUID(),Producto, Precio, tipo, fecha };
         Registro.push(formUser);
-        localStorage.setItem("Registro", JSON.stringify(Registro));
+        localStorage.setItem("RegistroE1", JSON.stringify(Registro));
         const newArray = Cuenta.filter((Cuenta) => Cuenta.id !== id);
         Cuenta = newArray;
         localStorage.setItem("CuentaE1", JSON.stringify(Cuenta));
@@ -162,4 +158,3 @@ contenidoC.addEventListener("click", (e) => {
 mostar();
 mostar2()
 mostar3()
-
