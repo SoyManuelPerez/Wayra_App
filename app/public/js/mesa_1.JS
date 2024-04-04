@@ -4,7 +4,6 @@ $(document).ready( function () {
     });
 } )
 //Creacion de bases de datos locales
-localStorage.setItem("contador",0); 
 let Productos = JSON.parse(localStorage.getItem("inventario")) || [];
 let Cuenta = JSON.parse(localStorage.getItem("Cuenta")) || []
 let contador = JSON.parse(localStorage.getItem("contador")) || [];
@@ -14,7 +13,10 @@ const contenido = document.querySelector("#contenido");
 const contenidoC = document.querySelector("#contenidoC");
 const contenidosuma = document.querySelector("#contenidosuma");
 const pagofactura = document.querySelector("#factura")
-
+if(parseInt(localStorage.getItem("Suma"))!=1||Cuenta==[]){
+    let ini = 0
+Suma.push(ini)
+localStorage.setItem("Suma",Suma)}
 //Para cuadno se paga la factura elimine toda la cuneta
 pagofactura.addEventListener("click", (e) => {
     localStorage.removeItem("Cuenta"); 
@@ -155,4 +157,4 @@ contenidoC.addEventListener("click", (e) => {
 });
 mostar();
 mostar2()
-mostar3()
+mostar3() 
