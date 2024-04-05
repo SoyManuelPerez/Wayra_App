@@ -1,5 +1,7 @@
 $(document).ready( function () {
-    $('#productos').DataTable();
+    $('#productos').DataTable({
+        lengthChange: false,
+    });
 } )
 let Productos = JSON.parse(localStorage.getItem("inventario")) || [];
 const formRegister = document.querySelector("#inventario");
